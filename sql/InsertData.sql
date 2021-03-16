@@ -5,7 +5,7 @@ insert into product values ('cowboy boot', 20, 45, -1, 'China', 40, 80, 1)
 insert into product values ('cowboy jacket', 40, 100, -1, 'China', 25, 400, 1)
 */
 
-/*insert into Customer values ('The Greatest Gay Carnival', '2021', 'Østerågade 5', '9200', 'Aalborg', '+4542098832')*/
+/*insert into Customer values ('The Greatest Carnival', '2021', 'Østerågade 5', '9200', 'Aalborg', '+4542098832')*/
 
 /*
 insert into Invoice values ('2021-03-16', 2000)
