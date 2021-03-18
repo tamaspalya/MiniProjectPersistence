@@ -1,1 +1,0 @@
-select * from customer join SalesOrder on customer.id = SalesOrder.customer_id
