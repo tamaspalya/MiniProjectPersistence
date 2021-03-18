@@ -17,6 +17,12 @@ public class DBCustomer implements IDBCustomer {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	@Override
+	public Customer findByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	@Override
 	public void update(Customer customer) {
