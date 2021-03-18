@@ -1,22 +1,18 @@
 package model;
 
-public class Customer {
-	//hi I'm DoM
-	//and a customer is a customer :)
+public class Supplier {
 	
 	private int id;
 	private String name;
 	private String address;
-	private String zipcode;
-	private String city;
+	private String country;
 	private String phoneNo;
 	
-	public Customer(int id, String name, String address, String zipcode, String city, String phoneNu) {
+	public Supplier(int id, String name, String address, String country, String phoneNo) {
 		this.name = name;
 		this.address = address;
-		this.zipcode = zipcode;
-		this.city = city;
-		this.phoneNo = phoneNu;
+		this.country = country;
+		this.phoneNo = phoneNo;
 		this.id = id;
 	}
 	
@@ -44,20 +40,12 @@ public class Customer {
 		this.address = address;
 	}
 
-	public String getZipcode() {
-		return zipcode;
+	public String getCountry() {
+		return country;
 	}
 
-	public void setZipcode(String zipcode) {
-		this.zipcode = zipcode;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 	public String getPhoneNo() {
