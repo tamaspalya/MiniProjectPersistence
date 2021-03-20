@@ -12,9 +12,10 @@ public class Product {
 	private String countryOfOrigin;
 	private int minStock;
 	private int stock;
+	private int supplierId;
 	
 	public Product(int id, String name, BigDecimal purchasePrice, BigDecimal salesPrice, BigDecimal rentPrice,
-			String countryOfOrigin, int minStock, int stock) {
+			String countryOfOrigin, int minStock, int stock, int supplierId) {
 		this.id = id;
 		this.name = name;
 		this.purchasePrice = purchasePrice;
@@ -23,6 +24,7 @@ public class Product {
 		this.countryOfOrigin = countryOfOrigin;
 		this.minStock = minStock;
 		this.stock = stock;
+		this.supplierId = supplierId;
 	}
 
 	public int getId() {
@@ -87,5 +89,13 @@ public class Product {
 
 	public void setStock(int stock) {
 		this.stock = stock;
+	}
+
+	public int getSupplierId() {
+		return supplierId;
+	}
+
+	public void setSupplierId(int supplierId) {
+		this.supplierId = supplierId;
 	}
 }
