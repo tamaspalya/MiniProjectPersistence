@@ -3,6 +3,7 @@ package database;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import model.Product;
@@ -39,7 +40,7 @@ public class DBProduct implements IDBProduct {
 	
 	@Override
 	public List<Product> findByIds(List<Integer> ids) throws SQLException, DataAccessException {
-		List<Product> products = null;
+		List<Product> products = new ArrayList<Product>();
 		
 		for(int i = 0; i < ids.size(); i++) {
 			products.add(findById(ids.get(i)));
@@ -48,12 +49,13 @@ public class DBProduct implements IDBProduct {
 		return products;
 	}
 
+	//depricated lmao
 	@Override
 	public List<Product> checkStock(List<Integer> product_ids, List<Integer> num_wanted) throws IllegalArgumentException, SQLException, DataAccessException {
 		if(product_ids.size() != num_wanted.size()) {
 			throw new IllegalArgumentException("Lists must be the same size");
 		}
-		List<Product> products = null;
+		List<Product> products = new ArrayList<Product>();
 		
 		for(int i = 0; i < product_ids.size(); i++) {
 			products.add(findById(product_ids.get(i)));

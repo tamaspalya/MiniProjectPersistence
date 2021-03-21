@@ -26,7 +26,7 @@ class TestDBCustomer {
 		String city = "Aalborg";
 		String phone_no = "+4542098832";
 		
-		assertNotNull("Customer found - customer cannot be null", customer);
+		assertNotNull("Customer not found - customer cannot be null", customer);
 		assertEquals(id, customer.getId());
 		assertEquals(address, customer.getAddress());
 		assertEquals(zipcode, customer.getZipcode());

@@ -98,4 +98,27 @@ public class Product {
 	public void setSupplierId(int supplierId) {
 		this.supplierId = supplierId;
 	}
+	
+	//overriding the equals and hashcode methods for testing
+	@Override
+	public boolean equals(Object obj) {
+		//if the reference is the same, they are the same object
+		if(this == obj)
+			return true;
+		
+		//if the object is null or they are not the same class, they cannot be equal
+		if(obj == null || obj.getClass() != this.getClass())
+			return false;
+		
+		//casting from object as we already know from the last 'if' that it is the same class
+		Product pr = (Product) obj;
+		//we only need to check the id as different products have different ids
+		return this.id == pr.getId();
+	}
+	
+	//our hashCode() method will use the id as a hashcode as it is unique, but same for the same product
+	@Override
+	public int hashCode() {
+		return this.id;
+	}
 }

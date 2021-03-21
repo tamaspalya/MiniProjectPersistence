@@ -12,7 +12,7 @@ class TestDBConnection {
 	void testConnectionToDatabase() throws DataAccessException {
 		DBConnection dbConnection = DBConnection.getInstance();
 		
-		assertNotNull("Connection to the database failed", dbConnection);
+		assertNotNull("Connection failed to the database - connection cannot be null", dbConnection);
 		dbConnection.disconnect();
 	}
 	
@@ -21,7 +21,7 @@ class TestDBConnection {
 		DBConnection dbConnection = DBConnection.getInstance();
 		DBConnection.setConnectionInfo("dmai0920_1086316", "hildur.ucn.dk", 1433, "dmai0920_1086316", "Password1!");
 		
-		assertNotNull("Successfull connection to the database", dbConnection);
+		assertNotNull("Connection failed to the database - connection cannot be null", dbConnection);
 		
 		dbConnection.disconnect();
 	}
