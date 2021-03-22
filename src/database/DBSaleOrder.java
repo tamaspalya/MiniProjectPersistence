@@ -28,11 +28,12 @@ public class DBSaleOrder implements IDBSaleOrder {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
 
 	@Override
 	public void insertSaleOrder(SaleOrder saleOrder) throws SQLException, DataAccessException {
 		dbConnection = DBConnection.getInstance();
-		String sql_insert = "insert into SalesOrder values (?, ?, ?, ?, ?, ?)"; // to be fixed to SaleOrder
+		String sql_insert = "insert into SaleOrder values (?, ?, ?, ?, ?, ?)";
 		PreparedStatement p_stmt = 	dbConnection.getConnection().prepareStatement(sql_insert , Statement.RETURN_GENERATED_KEYS);
 		
 		p_stmt.setDate(1, saleOrder.getDate());
@@ -62,7 +63,7 @@ public class DBSaleOrder implements IDBSaleOrder {
 	public void removeById(int id) throws DataAccessException, SQLException {
 		dbConnection = DBConnection.getInstance();
 		
-		String sqlDelete = "delete from SalesOrder where id = ?"; // to fix to SaleOrder
+		String sqlDelete = "delete from SaleOrder where id = ?";
 		
 		PreparedStatement p_stmt = 	dbConnection.getConnection().prepareStatement(sqlDelete);
 		p_stmt.setInt(1, id);
@@ -77,7 +78,7 @@ public class DBSaleOrder implements IDBSaleOrder {
 	public int insertProductSaleOrders(SaleOrder saleOrder) throws DataAccessException, SQLException {
 		dbConnection = DBConnection.getInstance();
 		
-		String sqlInsert = "insert into ProductSalesOrder values(?, ?, ?)"; //ProductSaleOrder
+		String sqlInsert = "insert into ProductSaleOrder values(?, ?, ?)";
 				
 		List<Integer> product_ids = saleOrder.getOrderLine().getProductIds();
 		List<Integer> product_amounts = saleOrder.getOrderLine().getProductAmounts();

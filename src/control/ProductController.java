@@ -10,7 +10,9 @@ import database.IDBProduct;
 import model.Product;
 
 public class ProductController {
+	
 	IDBProduct dbproduct = new DBProduct();
+	
 	public List<Product> checkStock(List<Integer> product_ids, List<Integer> num_wanted) throws IllegalArgumentException, SQLException, DataAccessException {
 		if(product_ids.size() != num_wanted.size()) {
 			throw new IllegalArgumentException("Lists must be the same size");
